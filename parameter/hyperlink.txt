@@ -1,0 +1,5 @@
+http://mnregaweb4.nic.in/netnrega/app_issue.aspx?lflag=eng&source=national&labels=labels&Digest=G1REW9Uem9bZKGAleXtm6w&fin_year=
+http://mnregaweb4.nic.in/netnrega/citizen_html/demregister.aspx?lflag=eng&source=national&labels=labels&Digest=cT/J7ChEq5LOfEr0AmsuAQ&fin_year=
+http://mnregaweb4.nic.in/netnrega/state_html/delay_comp.aspx?lflag=eng&source=national&labels=labels&Digest=cT/J7ChEq5LOfEr0AmsuAQ&fin_year=
+http://mnregaweb4.nic.in/netnrega/avg_wage_paid.aspx?source=national&Digest=9W1xBQWtfJS+lGqDnrVHsA&fin_year=
+http://mnregaweb4.nic.in/netnrega/state_html/executive_agency_report_new.aspx?lflag=eng&source=national&labels=labels&Digest=HNrisV4bhHnb7Gve3mAKYQ&fin_year=

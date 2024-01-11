@@ -1,0 +1,1 @@
+Use this directory for scraping the components such as R1.1.1, R5.1.1, R7.2.1 etc. which are our main NREGA variables.
