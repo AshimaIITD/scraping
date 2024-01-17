@@ -2,8 +2,8 @@ Postgres table: nrega_mis_data_with_indices
 __________________________________________________________________________________________________________________________________________
 
  registered_household                 No. of Registered Household (Report 5.1.1)
- employment_provided_total_persondays Employment Provided Persondays (Report 7.1.2)
- employment_provided_household        Employment Provided Household (Report 7.1.2) 
+ employment_provided_total_persondays Employment Provided Persondays (Report 5.1.5)
+ employment_provided_household        Employment Provided Household (Report 5.1.5) 
  employment_demanded_persons          Employment demanded Persons (Report 5.1.1)
  employment_demanded_household        Employment demanded Household (Report 5.1.1) 
  total_jobcards_issued                Cumulative No. of HH issued jobcards Total (Report 5.1.1)
