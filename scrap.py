@@ -285,13 +285,13 @@ args = parser.parse_args()
 report_number = args.report
 year = args.year
 
-#reading parameters from parameter.xlsx
-df = pd.read_excel('parameters.xlsx')
+#reading parameters from report_parameter.xlsx
+df = pd.read_excel('report_parameters.xlsx')
 
-#getting names of all reports present in parameters.xlsx file
+#getting names of all reports present in report_parameters.xlsx file
 reports_list = df['report number'].tolist()
 
-#checking if report present in the parameters.xlsx file or not
+#checking if report present in the report_parameters.xlsx file or not
 if(report_number not in reports_list):
     sys.stderr.write(f"Report {report_number} not found.\n")
 
