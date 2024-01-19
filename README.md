@@ -1,5 +1,5 @@
 
-# Installation Dependencies
+# Dependencies Installation
 Run the **install_dependencies.sh** script to install the dependencies.
 ```
 sh install_dependencies.sh
