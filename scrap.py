@@ -104,7 +104,6 @@ def exec_district(district,state_name,state_dir,parameters):
             district_dir = path.join(state_dir, district_name)
             if not path.exists(district_dir):
                 os.makedirs(district_dir)
-
             # Getting the blocks from the district page link formed above
             bsoup = BeautifulSoup(requests.get(html_link).content,'html.parser')
             blocks = bsoup.findAll("tr")[parameters['block_trunc_index_start']:parameters['block_trunc_index_end']]
@@ -122,7 +121,7 @@ def exec_district(district,state_name,state_dir,parameters):
 
                         # Append the href link obtained to the base url      
                         ##replace part for report 7.1.1 to make html_link correct
-                        html_link = parameters['base'] + href_element[0]['href'].replace('../../citizen_Html/','')
+                        html_link = parameters['base'] + href_element[0]['href'].replace('../../citizen_html/','')
                         block_name = href_element[0].text.replace("/","-")
 
                         # Check if the block name is empty
