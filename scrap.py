@@ -100,12 +100,23 @@ def exec_district(district,state_name,state_dir,parameters):
                 print(f"District in State: {state_name} not available")
                 return
 
+            
+            # Getting the blocks from the district page link formed above
+            bsoup = BeautifulSoup(requests.get(html_link).content,'html.parser')
+           
+           #For the reports where only block level data is available.
+            if(pd.isna(parameters['block_trunc_index_start'])):
+                file = open(os.path.join(state_dir, district_name + ".html"), 'wb')
+                file.write(bsoup.prettify(encoding='utf-8'))
+                print("html file saved")
+                file.close()
+                return
+            
             # Create the district directory if doesn't exist
             district_dir = path.join(state_dir, district_name)
             if not path.exists(district_dir):
                 os.makedirs(district_dir)
-            # Getting the blocks from the district page link formed above
-            bsoup = BeautifulSoup(requests.get(html_link).content,'html.parser')
+
             blocks = bsoup.findAll("tr")[parameters['block_trunc_index_start']:parameters['block_trunc_index_end']]
 
             # Iterating through each of the block
