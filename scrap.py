@@ -106,6 +106,8 @@ def exec_district(district,state_name,state_dir,parameters):
            
            #For the reports where only block level data is available.
             if(pd.isna(parameters['block_trunc_index_start'])):
+                if path.exists(path.join(state_dir, district_name + ".html")):
+                    return
                 file = open(os.path.join(state_dir, district_name + ".html"), 'wb')
                 file.write(bsoup.prettify(encoding='utf-8'))
                 print("html file saved")
