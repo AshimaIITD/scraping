@@ -26,8 +26,11 @@ sh scrap.sh -r 1.1.1 14.1. -y 2021-2022 2022-2023
 
 # Generating the reports from the scrapped html files
 First make sure that you have a folder named html in the current directory which would contain the folders for the individual report numbers mentioned above
-```
 Run the **generate_reports.py** file to generate the csv_files folder which would contains the csv files for the individual report numbers
 ```
+generate_reports.py
+```
 Run **merge_report1.py** to get report1, and the csv file csv_files/515.csv can be copied and renamed as report2.csv
+```
+merge_report1.py
 ```
