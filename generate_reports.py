@@ -6,7 +6,11 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 # For each report we have a getpanchayatTup function which extracts data from html file
-# For each report, we also have a createCSV function which helps us to extract the required columns and create the csv file 
+# We have this function for every report number and extracts only the required columns from their respective html file
+
+# For each report, we also have a createCSV function which helps us to create the csv file for the extracted columns from the html files
+# We have this function for every report number in which the naming of the columns for the different extracted columns are done
+# and then converted in the csv file
 
 years = ["2021-2022", "2022-2023", "2023-2024"]
 savedhtml_lines = ['R111', 'R515', 'R141', 'R511', 'R721', 'R711'] 
@@ -210,11 +214,13 @@ def create_csv_111(data):
     csv_filename = output_dir + '111.csv'
     df_selected.to_csv(csv_filename, index=False)
     
+# Helper function for reading a file
 def readfile(filename): 
     with open(filename, encoding='utf-8') as f:
         content = f.readlines()
     return [x.strip() for x in content]
 
+# We run a for loop on the savedhtml_lines which would process out the report numbers present in this list
 for i in range(len(savedhtml_lines)):
     data = []
     # Getting the parameter name
