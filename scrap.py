@@ -118,8 +118,8 @@ def exec_district(district,state_name,state_dir,parameters):
             district_dir = path.join(state_dir, district_name)
             if not path.exists(district_dir):
                 os.makedirs(district_dir)
-
-            blocks = bsoup.findAll("tr")[parameters['block_trunc_index_start']:parameters['block_trunc_index_end']]
+                
+            blocks = bsoup.findAll("tr")[int(parameters['block_trunc_index_start']):int(parameters['block_trunc_index_end'])]
 
             # Iterating through each of the block
             for block in blocks:
@@ -211,7 +211,7 @@ def exec_state(state,year_dir,parameters):
             print(html_link)
 
             #finding all the objects corresponding to districts in the state
-            districts = dsoup.findAll("tr")[parameters['district_trunc_index_start']:parameters['district_trunc_index_end']]
+            districts = dsoup.findAll("tr")[int(parameters['district_trunc_index_start']):int(parameters['district_trunc_index_end'])]
             
             #list of processes
             processes=[]
